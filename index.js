@@ -1,25 +1,17 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function isPalindrome(str){
+  let lowerStr= str.toLowerCase();
+  let reverStr = lowerStr.split('').reverse().join('')
+  if(lowerStr===reverStr){
+    return true;
+  }
+  return false;
 }
 
-/* 
-  Add your pseudocode here
-*/
+console.log(isPalindrome("ab"))
+console.log(isPalindrome("abba"));
+console.log(isPalindrome("a"));
+console.log(isPalindrome("robot"));
+console.log(isPalindrome("racecar"));
 
-/*
-  Add written explanation of your solution here
-*/
-
-// You can run `node index.js` to view these console logs
-if (require.main === module) {
-  // add your own custom tests in here
-  console.log("Expecting: true");
-  console.log("=>", isPalindrome("racecar"));
-
-  console.log("");
-
-  console.log("Expecting: false");
-  console.log("=>", isPalindrome("robot"));
-}
 
 module.exports = isPalindrome;
